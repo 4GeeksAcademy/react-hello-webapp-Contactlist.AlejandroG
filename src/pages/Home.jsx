@@ -1,16 +1,20 @@
-import rigoImageUrl from "../assets/img/rigo-baby.jpg";
-import useGlobalReducer from "../hooks/useGlobalReducer.jsx";
+import { useEffect } from "react";
+import useGlobalReducer from "../hooks/useGlobalReducer.jsx"
+import { Contact } from "../components/Contact/Contact.jsx"
+import { getContacts } from "../Services/ServicesApi";
 
 export const Home = () => {
 
-  const {store, dispatch} =useGlobalReducer()
+	const {dispatch} = useGlobalReducer()
 
-	return (
-		<div className="text-center mt-5">
-			<h1>Hello Rigo!!</h1>
-			<p>
-				<img src={rigoImageUrl} />
-			</p>
-		</div>
-	);
-}; 
+	useEffect(() => {
+		getContacts(dispatch)
+
+	}, []) 
+	return(
+		<>
+			<Contact/>
+		</>
+	)
+
+}
