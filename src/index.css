@@ -1,0 +1,43 @@
+:root {
+  --color-bg: #ffffff;
+  --color-bg-secondary: #f8f9fa;
+  --color-border: #eaeaea;
+  --color-text: #2c3e50;
+
+  --color-btn-bg: #3498db;
+  --color-btn-hover: #2980b9;
+  --color-btn-text: #ffffff;
+
+  --color-btn-edit: #f39c12;   
+  --color-btn-edit-hover: #e67e22;
+
+  --color-btn-delete: #e74c3c; 
+  --color-btn-delete-hover: #c0392b;
+
+  --color-footer-bg: #f1f1f1;
+  --color-footer-text: #555;
+}
+body.dark-mode {
+  --color-bg: #121212;
+  --color-bg-secondary: #1e1e1e;
+  --color-border: #333;
+  --color-text: #e0e0e0;
+
+  --color-btn-bg: #5dade2;
+  --color-btn-hover: #3498db;
+  --color-btn-text: #ffffff;
+
+  --color-btn-edit: #f1c40f;  
+  --color-btn-edit-hover: #d4ac0d;
+
+  --color-btn-delete: #e74c3c;
+  --color-btn-delete-hover: #c0392b;
+
+  --color-footer-bg: #0d0d0d;
+  --color-footer-text: #bbb;
+}
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  transition: background 1s ease, color 1s ease;
+}

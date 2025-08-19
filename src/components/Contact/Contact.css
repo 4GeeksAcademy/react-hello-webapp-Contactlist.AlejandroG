@@ -1,0 +1,73 @@
+.contact-card {
+  background: var(--color-bg-secondary);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  transition: all 1s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.contact-actions button {
+  flex: 0 0 auto;
+  min-width: 80px;
+  font-size: 0.85rem;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 1s ease;
+}
+.btn-edit {
+  background: var(--color-btn-edit, #f39c12);
+  color: #fff;
+}
+.btn-edit:hover {
+  background: var(--color-btn-edit-hover, #e67e22);
+}
+.btn-delete {
+  background: var(--color-btn-delete, #e74c3c);
+  color: #fff;
+}
+.btn-delete:hover {
+  background: var(--color-btn-delete-hover, #c0392b);
+}
+.no-contacts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 250px; 
+  padding: 2rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--color-text);
+  background: var(--color-bg-secondary);
+  border: 2px dashed var(--color-border);
+  border-radius: 12px;
+  opacity: 0.9;
+  transition: all 0.3s ease;
+}
+.no-contacts:hover {
+  opacity: 1;
+  transform: scale(1.02);
+  background: var(--color-bg);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+@media (max-width: 500px) {
+  .contact-actions {
+    flex-direction: row; 
+    justify-content: flex-start;
+  }
+  .contact-actions button {
+    flex: 1; 
+    max-width: 100px; 
+  }
+}
